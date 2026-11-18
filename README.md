@@ -37,3 +37,6 @@ Auch Absender, Empfänger und Betreff dürfen Markdown enthalten (z. B. `**Kai K
 
 ## Dateiformat
 Jeder Brief ist eine `.letter`-Datei (lesbares JSON) im Ablage-Ordner.
+
+## Lizenz
+[MIT](LICENSE) © 2026 Kai Kranz
