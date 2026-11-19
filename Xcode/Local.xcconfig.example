@@ -1,0 +1,3 @@
+// Kopieren nach Xcode/Local.xcconfig und Team-ID eintragen.
+// Team-ID: developer.apple.com → Account → Membership details
+DEVELOPMENT_TEAM = ABCDE12345

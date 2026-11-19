@@ -35,6 +35,21 @@ Auch Absender, Empfänger und Betreff dürfen Markdown enthalten (z. B. `**Kai K
 | Folgeseiten | „Seite x von y“ unten rechts |
 | Marken | Falz 105 / 210 mm, Loch 148,5 mm |
 
+## Mit Xcode bauen, signieren und notarisieren
+Einmalig:
+```bash
+cp Xcode/Local.xcconfig.example Xcode/Local.xcconfig   # Team-ID eintragen
+```
+Projekt erzeugen und öffnen (nach jeder Änderung an `project.yml` oder neuen Dateien erneut):
+```bash
+xcodegen && open metaLetter.xcodeproj
+```
+Veröffentlichen: **Product → Archive** → **Distribute App** → **Direct Distribution**.
+Xcode signiert mit „Developer ID Application“, notarisiert und heftet das Ticket an.
+Danach im Organizer **Export**, um die fertige `metaLetter.app` zu erhalten.
+
+Versionsnummer: `MARKETING_VERSION` / `CURRENT_PROJECT_VERSION` in `project.yml`.
+
 ## Dateiformat
 Jeder Brief ist eine `.letter`-Datei (lesbares JSON) im Ablage-Ordner.
 
