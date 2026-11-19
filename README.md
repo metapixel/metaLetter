@@ -50,6 +50,23 @@ Danach im Organizer **Export**, um die fertige `metaLetter.app` zu erhalten.
 
 Versionsnummer: `MARKETING_VERSION` / `CURRENT_PROJECT_VERSION` in `project.yml`.
 
+## Automatische Releases (signiert & notarisiert)
+Die GitHub Action `.github/workflows/release.yml` baut die App auf einem Mac-Runner, signiert sie mit Developer ID,
+notarisiert sie und hängt `metaLetter-<Version>.zip` an ein GitHub-Release.
+
+**Starten:** GitHub → *Actions* → *Release* → *Run workflow* → Versionsnummer eingeben.
+(Alternativ einen Tag pushen: `git tag v1.0.1 && git push origin v1.0.1`.)
+
+**Einmalig benötigte Secrets** (Settings → Secrets and variables → Actions):
+
+| Secret | Inhalt |
+|---|---|
+| `DEVELOPER_ID_CERT_P12` | Developer-ID-Zertifikat als .p12, base64-kodiert (`base64 -i cert.p12 | pbcopy`) |
+| `DEVELOPER_ID_CERT_PASSWORD` | Passwort, das beim Export der .p12 vergeben wurde |
+| `TEAM_ID` | Team-ID (10 Zeichen) |
+| `APPLE_ID` | Apple-ID des Developer Accounts |
+| `APPLE_APP_PASSWORD` | App-spezifisches Passwort von appleid.apple.com |
+
 ## Dateiformat
 Jeder Brief ist eine `.letter`-Datei (lesbares JSON) im Ablage-Ordner.
 

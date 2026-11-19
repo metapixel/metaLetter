@@ -16,6 +16,7 @@ targets:
   metaLetter:
     type: application
     platform: macOS
+    scheme: {}
     sources:
       - path: Sources/metaLetter
       - path: Xcode/Assets.xcassets
