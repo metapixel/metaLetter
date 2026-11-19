@@ -61,7 +61,7 @@ notarisiert sie und hängt `metaLetter-<Version>.zip` an ein GitHub-Release.
 
 | Secret | Inhalt |
 |---|---|
-| `DEVELOPER_ID_CERT_P12` | Developer-ID-Zertifikat als .p12, base64-kodiert (`base64 -i cert.p12 | pbcopy`) |
+| `DEVELOPER_ID_CERT_P12` | Developer-ID-Zertifikat als .p12, base64-kodiert (`base64 -i cert.p12 \| pbcopy`) |
 | `DEVELOPER_ID_CERT_PASSWORD` | Passwort, das beim Export der .p12 vergeben wurde |
 | `TEAM_ID` | Team-ID (10 Zeichen) |
 | `APPLE_ID` | Apple-ID des Developer Accounts |
